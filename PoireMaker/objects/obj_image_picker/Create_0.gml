@@ -1,6 +1,5 @@
 spriteSize = 200
 
-sprite_player = noone
 sprite_background = noone
 
 function selectBackground(){
@@ -34,10 +33,7 @@ function selectBackground(){
 }
 
 
-function selectPlayer(){
-	if sprite_player != noone{
-		//sprite_delete(sprite_player)
-	}
+function selectPlayer(player){
     var path = get_open_filename("Images|*.png;*.jpg", "");
 
     if (path != "") {
@@ -54,11 +50,9 @@ function selectPlayer(){
             
             sprite_collision_mask(spr, false, 0, 0, 0, 0, 0, bboxkind_precise, 0);
             
-			var player = instance_create_layer(room_width/2,room_height/2,"Instances",obj_player)
             player.sprite_index = spr;
             player.image_xscale = diff;
             player.image_yscale = diff;
         }
-		sprite_player = spr
     }
 }
