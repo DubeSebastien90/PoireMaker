@@ -1,4 +1,6 @@
-if position_meeting(mouse_x,mouse_y,self){
+is_visible = obj_maker.MAKING
+
+if position_meeting(mouse_x,mouse_y,self) && is_visible{
 	onHovered()
 	if mouse_check_button_pressed(mb_left){
 		onClicked()

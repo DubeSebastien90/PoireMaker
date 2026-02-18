@@ -7,6 +7,7 @@ event_inherited();
 image_xscale = 3
 image_yscale = 3
 
+//overide
 function onClicked(){
 	obj_maker.start_game()
 }
