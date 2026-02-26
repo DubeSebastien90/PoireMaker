@@ -1,4 +1,4 @@
-if obj_maker.MAKING{
+if !obj_maker.MAKING{
 	if place_meeting(x,y,obj_mouse){
 		while(place_meeting(x,y,obj_mouse)){
 			x = random_range(padding,room_width-padding)

@@ -3,6 +3,11 @@ temps = 0
 rot = 0
 is_visible = true
 
+sprite_icon = noone
+index_icon = 0
+
+helper_text = ""
+
 depth -= 1
 
 function onHovered(){

@@ -1,8 +1,24 @@
 MAKING = true
 
+//audio
+audio_stream = noone
+audio = noone
+
 function start_game(){
 	MAKING = false
+	if audio_stream != noone{
+		audio = audio_play_sound(audio_stream,0,true)
+	}
 }
+
+function end_game(){
+	MAKING = true
+	audio_stop_sound(audio)
+	if instance_exists(obj_player){
+		obj_player.reset()
+	}
+}
+
 //ui
 bs = sprite_get_width(spr_button)
 tbp = 5 //top bar padding
