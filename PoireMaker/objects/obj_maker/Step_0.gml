@@ -7,6 +7,7 @@ if MAKING{
 	}
 
 	if keyboard_check_pressed(ord("W")) {
+		instance_destroy(obj_background)
 		var background = instance_create_layer(room_width/2,room_height/2,"back",obj_background)
 		obj_image_picker.selectBackground(background)
 	}
