@@ -93,3 +93,7 @@ game_surface = -1;
 view_surface_id[0] = game_surface;
 
 load_data()
+
+if !obj_project.DEV{
+	start_game()
+}
