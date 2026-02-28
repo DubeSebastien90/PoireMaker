@@ -15,5 +15,6 @@ helper_text = "Save and exit to menu"
 //overide
 function onClicked(){
 	obj_project.save_json_project_file()
+	obj_project.reset_memory()
 	room = RoomMenu
 }

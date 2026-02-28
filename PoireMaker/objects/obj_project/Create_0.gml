@@ -3,8 +3,6 @@ project_name = ""
 
 DEV = true
 
-dir = "C:/Users/sebas/Desktop/GameDev/PoireMakerGames/"
-
 enum dataType {
 	PLAYER,
 	BACKGROUND,
@@ -12,12 +10,14 @@ enum dataType {
 	MESSAGE
 }
 
-data = {
-    player_path: "",
-	background_path: "",
-	music_path: "",
-	character_message: ""
-};
+function reset_memory(){
+	data = {
+		player_path: "",
+		background_path: "",
+		music_path: "",
+		character_message: ""
+	};
+}
 
 
 function save_json_project_file(){
@@ -80,3 +80,5 @@ function read_json_project_file(){
 		room_goto(RoomGame)
     }
 }
+
+reset_memory()
