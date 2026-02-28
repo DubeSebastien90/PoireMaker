@@ -1,5 +1,4 @@
-if keyboard_check_pressed(ord("N")){
-	//new project
+if keyboard_check_pressed(ord("N")) {
 	prompt_id = get_string_async("Enter the name of your project:", "");
 }
 

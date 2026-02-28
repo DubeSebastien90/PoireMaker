@@ -42,7 +42,7 @@ function load_data(){
 	if obj_project.data.background_path != ""{
 		setup_background(obj_project.dir+obj_project.project_name+"\\"+obj_project.data.background_path)
 	}
-	if obj_project.data.player_path != ""{
+	if obj_project.data.music_path != ""{
 		setup_music(obj_project.dir+obj_project.project_name+"\\"+obj_project.data.music_path)
 	}
 }
