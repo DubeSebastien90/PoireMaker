@@ -8,11 +8,11 @@ image_xscale = 3
 image_yscale = 3
 
 sprite_icon = spr_icon
-index_icon = 3
+index_icon = 5
 
-helper_text = "Import player"
+helper_text = "Import music"
 
 //overide
 function onClicked(){
-	obj_maker.setup_player("")
+	obj_maker.setup_music("")
 }

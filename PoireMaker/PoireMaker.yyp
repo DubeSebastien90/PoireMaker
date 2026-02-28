@@ -26,6 +26,8 @@
     {"id":{"name":"obj_asset_picker","path":"objects/obj_asset_picker/obj_asset_picker.yy",},},
     {"id":{"name":"obj_background","path":"objects/obj_background/obj_background.yy",},},
     {"id":{"name":"obj_button_exit","path":"objects/obj_button_exit/obj_button_exit.yy",},},
+    {"id":{"name":"obj_button_import_background","path":"objects/obj_button_import_background/obj_button_import_background.yy",},},
+    {"id":{"name":"obj_button_import_music","path":"objects/obj_button_import_music/obj_button_import_music.yy",},},
     {"id":{"name":"obj_button_import_player","path":"objects/obj_button_import_player/obj_button_import_player.yy",},},
     {"id":{"name":"obj_button_start","path":"objects/obj_button_start/obj_button_start.yy",},},
     {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},

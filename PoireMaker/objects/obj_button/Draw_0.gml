@@ -9,6 +9,12 @@ if is_visible{
 		var _w = string_width(helper_text)/2 + 5
 		var _x = min(room_width-_w,x)
 		_x = max(_w,x)
+		
+		// Dessiner le fond de l'UI (Menu de côté)
+		draw_set_color(c_dkgray);
+		draw_rectangle(_x-_w-3, y+27, _x+_w+3, y+55, false);
+		draw_set_color(c_white);
+		
 		draw_text(_x,y+30,helper_text)
 	}
 }

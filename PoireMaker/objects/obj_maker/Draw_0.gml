@@ -14,4 +14,15 @@ if (MAKING) {
     draw_rectangle(0, 0, display_w, tbs, false);
     draw_set_color(c_white);
 
+} else {
+	if obj_project.DEV{
+		draw_set_valign(fa_top)
+		draw_set_halign(fa_left)
+		var s = "Press escape to end"
+	
+		draw_set_color(c_dkgray);
+		draw_rectangle(0, 0, string_width(s)+6, string_height(s)+6, false);
+		draw_set_color(c_white);
+		draw_text(3,3,s)
+	}
 }
