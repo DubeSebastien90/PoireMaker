@@ -1,4 +1,4 @@
-MAKING = true
+MAKING = obj_project.DEV
 
 //audio
 audio_stream = -1

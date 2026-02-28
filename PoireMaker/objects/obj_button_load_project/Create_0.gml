@@ -10,8 +10,11 @@ image_yscale = 3
 x = room_width/2
 y = room_height/2 + 50
 
+if obj_project.DEV = false{
+	y = room_height/2
+}
 
-helper_text = "Load existing project"
+helper_text = "Load a game"
 
 text_button = true
 

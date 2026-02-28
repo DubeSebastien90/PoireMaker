@@ -1,7 +1,7 @@
 prompt_id = ""
 project_name = ""
 
-DEV = true
+DEV = false
 
 dir = "C:/Users/sebas/Desktop/GameDev/PoireMakerGames/"
 
