@@ -20,15 +20,31 @@ function end_game(){
 }
 
 function setup_player(path){
-	instance_destroy(obj_player)
 	var player = instance_create_layer(room_width/2,room_height/2,"Instances",obj_player)
-	obj_asset_picker.selectPlayer(player, path)
+	if obj_asset_picker.selectPlayer(player, path){
+		var _new_id = player.id; // On stocke l'ID du petit nouveau
+		with(obj_player) {
+            if (id != _new_id) { 
+                instance_destroy(); 
+            }
+        }
+	} else{
+		instance_destroy(player)
+	}
 }
 
 function setup_background(path){
-	instance_destroy(obj_background)
 	var background = instance_create_layer(room_width/2,room_height/2,"back",obj_background)
-	obj_asset_picker.selectBackground(background, path)
+	if obj_asset_picker.selectBackground(background, path){
+		var _new_id = background.id; // On stocke l'ID du petit nouveau
+		with(obj_background) {
+            if (id != _new_id) { 
+                instance_destroy(); 
+            }
+        }
+	} else{
+		instance_destroy(background)
+	}
 }
 
 function setup_music(path){
@@ -55,6 +71,8 @@ tbbs = 3 //top bar button size
 tbs = bs*tbbs + 2*tbp //top bar size
 
 start_button = instance_create_layer(tbp + (bs*tbbs) /2,tbp + (bs*tbbs) /2,"ui",obj_button_start)
+import_player__button = instance_create_layer(tbp*2 + (bs*tbbs)/2 + bs*tbbs,tbp + (bs*tbbs) /2,"ui",obj_button_import_player)
+exit_button = instance_create_layer(room_width - tbp - (bs*tbbs) /2,tbp + (bs*tbbs) /2,"ui",obj_button_exit)
 
 
 game_surface = -1;

@@ -3,6 +3,8 @@ temps = 0
 rot = 0
 is_visible = true
 
+show_helper_text = false
+
 sprite_icon = noone
 index_icon = 0
 
@@ -12,6 +14,7 @@ depth -= 1
 
 function onHovered(){
 	image_index = 1
+	show_helper_text = true
 }
 
 function onNotHovered(){

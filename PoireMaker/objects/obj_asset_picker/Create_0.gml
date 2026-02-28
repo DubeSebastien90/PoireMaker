@@ -21,14 +21,17 @@ function selectMusic(path){
 			copy_file(path, dataType.MUSIC)
 		}
 	}
-	if (obj_maker.audio_stream != -1) {
-        audio_destroy_stream(obj_maker.audio_stream);
-        obj_maker.audio_stream = -1;
-    }
     if (path != "") {
+		if (obj_maker.audio_stream != -1) {
+			audio_destroy_stream(obj_maker.audio_stream);
+			obj_maker.audio_stream = -1;
+		}
+		
         obj_maker.audio_stream = audio_create_stream(path);
+		return true
 		
     }
+	return false
 }
 
 function selectBackground(background, path){
@@ -59,7 +62,9 @@ function selectBackground(background, path){
                 image_yscale = diff;
             }
         }
+		return true
     }
+	return false
 }
 
 
@@ -89,6 +94,7 @@ function selectPlayer(player, path){
             player.image_xscale = diff;
             player.image_yscale = diff;
         }
+		return true
     }
-
+	return false
 }
