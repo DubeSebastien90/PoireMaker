@@ -8,13 +8,15 @@ dir = "C:/Users/sebas/Desktop/GameDev/PoireMakerGames/"
 enum dataType {
 	PLAYER,
 	BACKGROUND,
-	MUSIC
+	MUSIC,
+	MESSAGE
 }
 
 data = {
     player_path: "",
 	background_path: "",
-	music_path: ""
+	music_path: "",
+	character_message: ""
 };
 
 
@@ -37,7 +39,9 @@ function edit_json_project_file(field, newData){
 	if field = dataType.MUSIC{
 		data.music_path = newData
 	}
-	show_debug_message(data.player_path)
+	if field = dataType.MESSAGE{
+		data.character_message = newData
+	}
 	save_json_project_file()
 }
 
@@ -59,6 +63,7 @@ function read_json_project_file(){
         if (variable_struct_exists(_parsed_data, "player_path")) data.player_path = _parsed_data.player_path;
         if (variable_struct_exists(_parsed_data, "background_path")) data.background_path = _parsed_data.background_path;
         if (variable_struct_exists(_parsed_data, "music_path")) data.music_path = _parsed_data.music_path;
+		if (variable_struct_exists(_parsed_data, "character_message")) data.character_message = _parsed_data.character_message;
 		
 		var _dir = filename_dir(path);
 
@@ -69,6 +74,8 @@ function read_json_project_file(){
 		dir = _root_dir + "\\"
 		
 		show_debug_message("Project loaded !");
+
+		obj_main_menu.stop_music()
 
 		room_goto(RoomGame)
     }

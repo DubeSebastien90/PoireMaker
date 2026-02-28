@@ -4,11 +4,18 @@ MAKING = true
 audio_stream = -1
 audio = noone
 
+//message
+character_message = ""
+
+//timer
+timer = 0
+
 function start_game(){
 	MAKING = false
 	if audio_stream != -1{
 		audio = audio_play_sound(audio_stream,0,true)
 	}
+	timer = 0
 }
 
 function end_game(){
@@ -17,6 +24,7 @@ function end_game(){
 	if instance_exists(obj_player){
 		obj_player.reset()
 	}
+	timer = 0
 }
 
 function setup_player(path){
@@ -61,6 +69,9 @@ function load_data(){
 	if obj_project.data.music_path != ""{
 		setup_music(obj_project.dir+obj_project.project_name+"\\"+obj_project.data.music_path)
 	}
+	if obj_project.data.character_message != ""{
+		character_message = obj_project.data.character_message
+	}
 }
 
 //ui
@@ -74,6 +85,7 @@ start_button = instance_create_layer(tbp + (bs*tbbs) /2,tbp + (bs*tbbs) /2,"ui",
 import_player_button = instance_create_layer(tbp*2 + (bs*tbbs)/2 + bs*tbbs,tbp + (bs*tbbs) /2,"ui",obj_button_import_player)
 import_player__button = instance_create_layer(tbp*3 + (bs*tbbs)/2 + bs*tbbs*2,tbp + (bs*tbbs) /2,"ui",obj_button_import_background)
 import_player__button = instance_create_layer(tbp*4 + (bs*tbbs)/2 + bs*tbbs*3,tbp + (bs*tbbs) /2,"ui",obj_button_import_music)
+message_button =  instance_create_layer(tbp*5 + (bs*tbbs)/2 + bs*tbbs*4,tbp + (bs*tbbs) /2,"ui",obj_button_message)
 exit_button = instance_create_layer(room_width - tbp - (bs*tbbs) /2,tbp + (bs*tbbs) /2,"ui",obj_button_exit)
 
 

@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"sh_couleur",
+  "name":"sh_couleur",
+  "parent":{
+    "name":"PoireMaker",
+    "path":"PoireMaker.yyp",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

@@ -10,6 +10,8 @@ index_icon = 0
 
 helper_text = ""
 
+text_button = false
+
 depth -= 1
 
 function onHovered(){

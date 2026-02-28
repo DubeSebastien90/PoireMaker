@@ -20,6 +20,8 @@ if (_id == prompt_id) {
        
 			dir = _selected_dir + "/";
 		
+			obj_main_menu.stop_music()
+		
 			room_goto(RoomGame)
 		}
 	

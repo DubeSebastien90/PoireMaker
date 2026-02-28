@@ -1,4 +1,8 @@
-is_visible = obj_maker.MAKING
+if room = RoomGame{
+	is_visible = obj_maker.MAKING
+} else{
+	is_visible = true
+}
 show_helper_text = false
 
 if position_meeting(mouse_x,mouse_y,self) && is_visible{
