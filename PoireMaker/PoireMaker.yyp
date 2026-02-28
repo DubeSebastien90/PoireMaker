@@ -22,14 +22,16 @@
   },
   "name":"PoireMaker",
   "resources":[
+    {"id":{"name":"obj_asset_picker","path":"objects/obj_asset_picker/obj_asset_picker.yy",},},
     {"id":{"name":"obj_background","path":"objects/obj_background/obj_background.yy",},},
     {"id":{"name":"obj_button_start","path":"objects/obj_button_start/obj_button_start.yy",},},
     {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},
-    {"id":{"name":"obj_image_picker","path":"objects/obj_image_picker/obj_image_picker.yy",},},
     {"id":{"name":"obj_maker","path":"objects/obj_maker/obj_maker.yy",},},
     {"id":{"name":"obj_mouse","path":"objects/obj_mouse/obj_mouse.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"obj_project","path":"objects/obj_project/obj_project.yy",},},
+    {"id":{"name":"RoomGame","path":"rooms/RoomGame/RoomGame.yy",},},
+    {"id":{"name":"RoomMenu","path":"rooms/RoomMenu/RoomMenu.yy",},},
     {"id":{"name":"spr_arrow","path":"sprites/spr_arrow/spr_arrow.yy",},},
     {"id":{"name":"spr_button","path":"sprites/spr_button/spr_button.yy",},},
     {"id":{"name":"spr_icon","path":"sprites/spr_icon/spr_icon.yy",},},
@@ -41,7 +43,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"RoomMenu","path":"rooms/RoomMenu/RoomMenu.yy",},},
+    {"roomId":{"name":"RoomGame","path":"rooms/RoomGame/RoomGame.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

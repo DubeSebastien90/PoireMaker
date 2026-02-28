@@ -2,16 +2,42 @@ spriteSize = 200
 
 sprite_background = noone
 
-function selectMusic(){
-    var path = get_open_filename("Sound|*.ogg", "");
+function copy_file(path, data_type){
+	var filename = filename_name(path);
+		
+	var dest_path = obj_project.dir + obj_project.project_name+ "/custom_assets/" + filename;
+	if (!directory_exists( obj_project.dir + obj_project.project_name+ "/custom_assets/")) {
+		directory_create( obj_project.dir + obj_project.project_name+ "/custom_assets/");
+	}
+	file_copy(path, dest_path);
+	
+	obj_project.edit_json_project_file(data_type,"custom_assets\\" + filename)
+}
 
+function selectMusic(path){
+	if path = ""{
+		path = get_open_filename("Sound|*.ogg", "");
+		if path != ""{
+			copy_file(path, dataType.MUSIC)
+		}
+	}
+	if (obj_maker.audio_stream != -1) {
+        audio_destroy_stream(obj_maker.audio_stream);
+        obj_maker.audio_stream = -1;
+    }
     if (path != "") {
         obj_maker.audio_stream = audio_create_stream(path);
+		
     }
 }
 
-function selectBackground(background){
-    var path = get_open_filename("Images|*.png;*.jpg", "");
+function selectBackground(background, path){
+	if path = ""{
+		path = get_open_filename("Images|*.png;*.jpg", "");
+		if path != ""{
+			copy_file(path, dataType.BACKGROUND)
+		}
+	}
 
     if (path != "") {
         var spr = sprite_add(path, 1, false, false, 0, 0);
@@ -37,8 +63,13 @@ function selectBackground(background){
 }
 
 
-function selectPlayer(player){
-    var path = get_open_filename("Images|*.png;*.jpg", "");
+function selectPlayer(player, path){
+	if path = ""{
+		path = get_open_filename("Images|*.png;*.jpg", "");
+		if path != ""{
+			copy_file(path, dataType.PLAYER)
+		}
+	}
 
     if (path != "") {
         var spr = sprite_add(path, 1, false, false, 0, 0);
@@ -59,4 +90,5 @@ function selectPlayer(player){
             player.image_yscale = diff;
         }
     }
+
 }
